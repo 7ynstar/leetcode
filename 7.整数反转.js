@@ -19,7 +19,12 @@
  * @return {number}
  */
 var reverse = function(x) {
-    
+  let res = 0
+  while (x !== 0) {
+    res = res * 10 + ~~(x % 10)
+    x = ~~(x / 10) 
+  }
+  return (res >= (2 ** 31) || res <= -(2 ** 31)) ? 0 : res
 };
 // @lc code=end
 

@@ -10,9 +10,10 @@
  * @return {boolean}
  */
 var containsDuplicate = function(nums) {
-  const filted = nums.filter((ele, index, array) => array.indexOf(ele) === index)
-  if (filted.length === nums.length) return false 
-  return true
+  // const filted = nums.filter((ele, index, array) => array.indexOf(ele) === index)
+  // if (filted.length === nums.length) return false 
+  // return true
+  return [...new Set(nums)].length !== nums.length
 };
 // @lc code=end
 
